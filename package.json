@@ -1,0 +1,7 @@
+{
+  "name": "make-automation-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npx serve@latest . -l $PORT"
+  }
+}

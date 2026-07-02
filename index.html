@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Lead Follow-Up Automation — Case Study</title>
+  <meta name="description" content="A Make.com + Claude AI automation that turns every contact form submission into a personalized AI-written follow-up email in ~30 seconds — and logs every lead automatically.">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { -webkit-font-smoothing: antialiased; }
+  </style>
+</head>
+
+<body class="bg-white font-sans text-slate-900">
+
+  <!-- ============ SECTION 1 — HERO ============ -->
+  <section id="hero" class="bg-white">
+    <div class="mx-auto max-w-[960px] px-6 md:px-10 py-20 md:py-28">
+      <span class="inline-flex items-center gap-1.5 rounded-full bg-blue-100 px-3.5 py-1.5 text-xs md:text-[13px] font-semibold text-blue-700">No-Code Automation</span>
+      <h1 class="mt-6 max-w-[820px] text-[32px] leading-[1.12] md:text-[56px] md:leading-[1.08] font-extrabold tracking-[-0.025em] text-slate-900 text-balance">AI-Powered Lead Follow-Up — Automated in 30 Seconds</h1>
+      <p class="mt-6 max-w-[640px] text-base md:text-[19px] leading-relaxed text-gray-600">Every contact form submission triggers a personalized AI-written email and logs the lead to a spreadsheet. Zero manual work. Zero missed leads.</p>
+      <div class="mt-8 flex flex-col sm:flex-row flex-wrap gap-3">
+        <div class="inline-flex items-center gap-2 self-start rounded-full bg-gray-100 px-[18px] py-[11px] text-sm md:text-[15px] font-medium text-gray-700"><span class="text-base">⚡</span> ~30 second response time</div>
+        <div class="inline-flex items-center gap-2 self-start rounded-full bg-gray-100 px-[18px] py-[11px] text-sm md:text-[15px] font-medium text-gray-700"><span class="font-bold text-green-600">✓</span> 100% of leads followed up automatically</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 2 — THE PROBLEM ============ -->
+  <section id="problem" class="bg-white">
+    <div class="mx-auto max-w-[960px] px-6 md:px-10 py-16 md:py-24">
+      <div class="text-[13px] font-semibold uppercase tracking-[0.09em] text-blue-600">The Problem</div>
+      <h2 class="mt-4 max-w-[720px] text-[26px] md:text-[34px] leading-[1.2] font-extrabold tracking-[-0.02em] text-slate-900 text-balance">Manual follow-up is slow, inconsistent, and easy to forget</h2>
+      <p class="mt-5 max-w-[680px] text-[17px] md:text-lg leading-[1.7] text-gray-600">Most small businesses receive leads through a contact form and then... nothing happens for hours or days. The lead cools off. Competitors who respond first win. And when you're busy, follow-up is the first thing that slips.</p>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 3 — THE SOLUTION (AUTOMATION FLOW) ============ -->
+  <section id="automation" class="border-y border-gray-200 bg-gray-50">
+    <div class="mx-auto max-w-[960px] px-6 md:px-10 py-20 md:py-28">
+      <div class="text-[13px] font-semibold uppercase tracking-[0.09em] text-blue-600">The Automation</div>
+      <h2 class="mt-4 text-[26px] md:text-[34px] leading-[1.2] font-extrabold tracking-[-0.02em] text-slate-900">Four steps. Thirty seconds. Fully automatic.</h2>
+
+      <!-- Flow diagram: horizontal on desktop, vertical stack on mobile -->
+      <div class="mt-10 md:mt-14 flex flex-col md:flex-row items-center md:items-start gap-0 md:gap-2">
+
+        <!-- Step 1 -->
+        <div class="w-full md:flex-1 flex flex-row md:flex-col items-start md:items-center gap-4 text-left md:text-center">
+          <div class="flex h-14 w-14 md:h-[72px] md:w-[72px] flex-shrink-0 items-center justify-center rounded-full bg-blue-100">
+            <svg class="h-6 w-6 md:h-[30px] md:w-[30px]" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="13" y2="12"/><path d="M13.5 17.5l2.2 2.2 1-3 3-1-6.2-2.4z" fill="#2563eb" stroke="none"/></svg>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <div class="text-[15px] md:text-base font-bold text-slate-900">Lead Submits Form</div>
+            <div class="text-[13px] md:text-sm leading-relaxed text-gray-500">Visitor fills out the contact form on any website or landing page.</div>
+          </div>
+        </div>
+
+        <!-- Connector -->
+        <div class="flex-shrink-0 py-2.5 md:py-0 md:pt-6">
+          <svg class="h-[22px] w-[22px] md:hidden" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <svg class="hidden h-[26px] w-[26px] md:block" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="w-full md:flex-1 flex flex-row md:flex-col items-start md:items-center gap-4 text-left md:text-center">
+          <div class="flex h-14 w-14 md:h-[72px] md:w-[72px] flex-shrink-0 items-center justify-center rounded-full bg-violet-100">
+            <svg class="h-6 w-6 md:h-[30px] md:w-[30px]" viewBox="0 0 24 24" fill="#7c3aed" stroke="none"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <div class="text-[15px] md:text-base font-bold text-slate-900">Make Detects It Instantly</div>
+            <div class="text-[13px] md:text-sm leading-relaxed text-gray-500">Make.com watches for new submissions and kicks off the automation in seconds.</div>
+          </div>
+        </div>
+
+        <!-- Connector -->
+        <div class="flex-shrink-0 py-2.5 md:py-0 md:pt-6">
+          <svg class="h-[22px] w-[22px] md:hidden" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <svg class="hidden h-[26px] w-[26px] md:block" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="w-full md:flex-1 flex flex-row md:flex-col items-start md:items-center gap-4 text-left md:text-center">
+          <div class="flex h-14 w-14 md:h-[72px] md:w-[72px] flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-100 to-violet-100">
+            <svg class="h-6 w-6 md:h-[30px] md:w-[30px]" viewBox="0 0 24 24" fill="none" stroke="#6d28d9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7L18.5 9.5 13.8 11.3 12 16l-1.8-4.7L5.5 9.5l4.7-1.8z" fill="#6d28d9" stroke="none"/><path d="M18.5 15l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z" fill="#a78bfa" stroke="none"/></svg>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <div class="text-[15px] md:text-base font-bold text-slate-900">Claude AI Writes a Personalized Reply</div>
+            <div class="text-[13px] md:text-sm leading-relaxed text-gray-500">Claude reads what the lead wrote and composes a tailored, professional response — not a template.</div>
+          </div>
+        </div>
+
+        <!-- Connector -->
+        <div class="flex-shrink-0 py-2.5 md:py-0 md:pt-6">
+          <svg class="h-[22px] w-[22px] md:hidden" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <svg class="hidden h-[26px] w-[26px] md:block" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="w-full md:flex-1 flex flex-row md:flex-col items-start md:items-center gap-4 text-left md:text-center">
+          <div class="flex h-14 w-14 md:h-[72px] md:w-[72px] flex-shrink-0 items-center justify-center rounded-full bg-green-100">
+            <svg class="h-6 w-6 md:h-[26px] md:w-[26px]" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <div class="text-[15px] md:text-base font-bold text-slate-900">Email Sent. Sheet Updated.</div>
+            <div class="text-[13px] md:text-sm leading-relaxed text-gray-500">The reply goes out via Gmail. The lead's info and AI response are logged to Google Sheets automatically.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 4 — DEMO VIDEO ============ -->
+  <section id="demo" class="bg-white">
+    <div class="mx-auto max-w-[960px] px-6 md:px-10 py-20 md:py-28">
+      <h2 class="text-[26px] md:text-[34px] leading-[1.2] font-extrabold tracking-[-0.02em] text-slate-900">See It In Action</h2>
+      <p class="mt-4 text-base md:text-lg leading-relaxed text-gray-600">2-minute walkthrough — live contact form to Gmail reply to Google Sheet.</p>
+
+      <div class="mt-9 overflow-hidden rounded-2xl bg-gray-100 shadow-[0_8px_30px_rgba(15,23,42,0.08)]">
+        <!-- REPLACE THE src BELOW WITH YOUR LOOM EMBED URL -->
+        <!-- Format: https://www.loom.com/embed/YOUR_VIDEO_ID -->
+        <div class="relative w-full" style="padding-bottom: 56.25%;">
+          <iframe
+            src="REPLACE_WITH_LOOM_EMBED_URL"
+            class="absolute inset-0 w-full h-full rounded-xl"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 5 — WHAT GETS AUTOMATED ============ -->
+  <section id="automated" class="border-t border-gray-200 bg-gray-50">
+    <div class="mx-auto max-w-[960px] px-6 md:px-10 py-20 md:py-28">
+      <h2 class="text-[26px] md:text-[34px] leading-[1.2] font-extrabold tracking-[-0.02em] text-slate-900">What This Replaces</h2>
+      <div class="mt-11 grid grid-cols-1 md:grid-cols-3 gap-5">
+
+        <!-- Card 1 — Instant Response -->
+        <div class="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
+          <div class="flex h-[52px] w-[52px] items-center justify-center rounded-xl bg-blue-100">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 16 14"/></svg>
+          </div>
+          <div class="mt-5 text-[19px] font-bold text-slate-900">Instant Response</div>
+          <div class="mt-2.5 text-[15px] leading-relaxed text-gray-500">Leads hear back in 30 seconds — not 3 hours.</div>
+        </div>
+
+        <!-- Card 2 — Personalized by AI -->
+        <div class="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
+          <div class="flex h-[52px] w-[52px] items-center justify-center rounded-xl bg-violet-100">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="#7c3aed" stroke="none"><path d="M12 3l1.8 4.7L18.5 9.5 13.8 11.3 12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M18.5 15l.6 1.6 1.6.6-1.6.6-.6 1.6-.6-1.6-1.6-.6 1.6-.6z"/></svg>
+          </div>
+          <div class="mt-5 text-[19px] font-bold text-slate-900">Personalized by AI</div>
+          <div class="mt-2.5 text-[15px] leading-relaxed text-gray-500">Every reply is written by Claude based on what the lead actually said.</div>
+        </div>
+
+        <!-- Card 3 — Always Logged -->
+        <div class="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
+          <div class="flex h-[52px] w-[52px] items-center justify-center rounded-xl bg-green-100">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="9" x2="9" y2="21"/></svg>
+          </div>
+          <div class="mt-5 text-[19px] font-bold text-slate-900">Always Logged</div>
+          <div class="mt-2.5 text-[15px] leading-relaxed text-gray-500">Every lead automatically lands in a spreadsheet. Nothing falls through the cracks.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 6 — CTA ============ -->
+  <section id="contact" class="bg-blue-600">
+    <div class="mx-auto max-w-[960px] px-6 md:px-10 py-20 md:py-28 text-center">
+      <h2 class="text-[30px] md:text-[38px] leading-[1.15] font-extrabold tracking-[-0.02em] text-white">Want this for your business?</h2>
+      <p class="mx-auto mt-4 max-w-[560px] text-base md:text-lg leading-relaxed text-blue-100">I can build a custom version of this automation for your workflow. Typically takes 1–2 days.</p>
+      <div class="mt-8">
+        <!-- TODO: Update this link to schwedland.dev/#contact once the portfolio site is live -->
+        <a href="mailto:aschwedland@pixel-master.com" class="inline-block w-full sm:w-auto rounded-[10px] bg-white px-[34px] py-[15px] text-base font-semibold text-blue-600 shadow-lg transition-transform hover:-translate-y-0.5">Let's Talk</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
